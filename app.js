@@ -1,6 +1,14 @@
-const str = 'Frontend Simplified'
+for (let i = 1; i <= 30; i++) {
+  if (i % 4 === 0 && i % 6 === 0) {
+    console.log(`${i} -> 'QuadHex'`);
 
-for (let i = 0; i < str.length; i++) {
-  console.log(str[i])
+  } else if (i % 4 === 0) {
+    console.log(`${i} -> 'Quad'`);
 
+  } else if (i % 6 === 0) {
+    console.log(`${i} -> 'Hex'`);
+    
+  } else {
+    console.log(`${i} -> ${i}`);
+  }
 }
