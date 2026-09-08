@@ -1,26 +1,15 @@
 // DRY - Don't repeat yourself
 
-// Array Filter Practice
-let arr = ["A+", "A", "FAIL"];
+//Filtering without the array.filter method
 
-let newArr = arr.filter((element) => {
-  return element === "A+" || element === "A";
-});
+let grades = ["A+", "A", "FAIL"]
 
-console.log(newArr);
+let goodGrades = [];
 
-let arr2 = ["FAIL", "FAIL", "B"];
+for (let i = 0; i < grades.length; i++) {
+  if (grades[i] !== 'FAIL') {
+    goodGrades.push(grades[i])
+  }
+}
 
-let newArr2 = arr2.filter((element) => {
-  return element === "B";
-});
-
-console.log(newArr2);
-
-let arr3 = ["FAIL"];
-
-let newArr3 = arr3.filter((element) => {
-  return element === "";
-});
-
-console.log(newArr3);
+console.log(goodGrades);
