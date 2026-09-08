@@ -1,9 +1,14 @@
 // DRY - Don't repeat yourself
 
-function convertCelciusToFahrenheit(cel) {
-  return cel * 1.8 + 32;
-}
+let arr = [20, 30, 40, 50, 100]
 
-console.log(convertCelciusToFahrenheit(0));
-console.log(convertCelciusToFahrenheit(10));
-console.log(convertCelciusToFahrenheit(30));
+// 1st element of array
+console.log(arr[0])
+
+// Last element of array
+console.log(arr[arr.length - 1])
+
+// Add element onto end of array
+arr.push(200)
+
+console.log(arr)
