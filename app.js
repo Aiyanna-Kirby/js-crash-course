@@ -1,5 +1,11 @@
-const str = "Kuroko's Basketball";
+// DRY - Don't repeat yourself
 
-for (let i = 0; i < str.length; i++) {
-  console.log(str[i]);
+// Function Definiton
+function welcomePersonToFES(name) {
+  console.log(`Welcome to FES, ${name}`);
 }
+
+// Call the function
+welcomePersonToFES("Aiyanna");
+welcomePersonToFES("Mary");
+welcomePersonToFES("Eshunti");
