@@ -1,6 +1,6 @@
 // DRY - Don't repeat yourself
 
-// How to log someone in
+// Creating a register function; hen push it
 let users = [
   {
     username: "Aiyanna",
@@ -27,14 +27,28 @@ function login(email, password) {
       console.log(users[i]);
       if (users[i].password === password) {
         console.log("log them in");
-      }
-      else {
-        console.log('wrong pass, try again please')
+      } else {
+        console.log("wrong pass, try again please");
       }
       return;
     }
   }
-  console.log('could not find email')
+  console.log("could not find email");
 }
 
 login("iamaiyanna@gmail.com", "wiggle");
+
+function register(user) {
+  users.push(user);
+}
+
+register({
+  username: "yanna",
+  email: "iamaiyanna@gmail.com",
+  password: "wiggle",
+  subscriptionStatus: "VIP",
+  discordId: "AiyannaKirby",
+  lessonsCompleted: [0, 1, 2],
+});
+
+console.log(users);
