@@ -1,15 +1,25 @@
 // DRY - Don't repeat yourself
 
-//Filtering without the array.filter method
+//let arr = [1, 4, 9, 16]
 
-let grades = ["A+", "A", "FAIL"]
+//let newArray = arr.map ((element) => {
+//console.log(element)
+//return undefined
+//})
 
-let goodGrades = [];
+//console.log(newArray)
 
-for (let i = 0; i < grades.length; i++) {
-  if (grades[i] !== 'FAIL') {
-    goodGrades.push(grades[i])
-  }
-}
+let dollars = [1, 5, 10, 3];
 
-console.log(goodGrades);
+let newArray = dollars.map((element) => {
+  console.log(element);
+  return element * 100;
+});
+
+console.log(newArray)
+
+let pesos = [0, 10, 20]
+
+let newArrayDos = pesos.map(element => element * 100)
+
+console.log(newArrayDos)
