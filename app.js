@@ -9,17 +9,13 @@
 
 //console.log(newArray)
 
+//Without Map Method
+
 let dollars = [1, 5, 10, 3];
 
-let newArray = dollars.map((element) => {
-  console.log(element);
-  return element * 100;
-});
+let cents = []
 
-console.log(newArray)
+for (let i = 0; i < dollars.length; ++i) {
+  console.log(dollars[i] * 100)}
 
-let pesos = [0, 10, 20]
-
-let newArrayDos = pesos.map(element => element * 100)
-
-console.log(newArrayDos)
+  console.log(cents)
