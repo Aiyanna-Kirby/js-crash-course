@@ -1,11 +1,9 @@
 // DRY - Don't repeat yourself
 
-// Function Definiton
-function welcomePersonToFES(name) {
-  console.log(`Welcome to FES, ${name}`);
+function convertCelciusToFahrenheit(cel) {
+  return cel * 1.8 + 32;
 }
 
-// Call the function
-welcomePersonToFES("Aiyanna");
-welcomePersonToFES("Mary");
-welcomePersonToFES("Eshunti");
+console.log(convertCelciusToFahrenheit(0));
+console.log(convertCelciusToFahrenheit(10));
+console.log(convertCelciusToFahrenheit(30));
