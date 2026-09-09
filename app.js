@@ -1,8 +1,6 @@
 // DRY - Don't repeat yourself
 
-// Change CSS
-
-function changeTitleToRed() {
-  console.log("clicked");
-  document.querySelector(".title").style.color = "red";
+// Dark Mode Toggle
+function toggleDarkMode() {
+  console.log(document.querySelector("body").classList.toggle("dark-theme"));
 }
