@@ -1,37 +1,14 @@
 // DRY - Don't repeat yourself
 
-const statusRef = document.querySelector(".status");
-const videoRef = document.querySelector(".video");
+function calcTime(seconds) {
+  let timerMinutes = Math.floor(seconds / 60)
+  let timerSeconds = seconds % 60
 
-function getSubscriptionStatus() {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve("FREE");
-    }, 2000);
-  });
-}
-
-function getVideo(subscriptionStatus) {
-  return new Promise((resolve, reject) => {
-    if (subscriptionStatus === "VIP") {
-      resolve("show video");
-    } else if (subscriptionStatus === "FREE") {
-      resolve("show trailer");
-    } else {
-      reject("no video");
-    }
-  });
-}
-//Async/Await Method
-async function main() {
-  const status = await getSubscriptionStatus();
-  statusRef.innerHTML = status;
-  try {
-    console.log(await getVideo(status));
-  } catch (e) {
-    console.log(e);
-    videoRef.innerHTML = e;
+  if (timerMinutes.toString().length === 1) {
+    timerMinutes = '0' + timerMinutes
   }
+
+  return timerMinutes + ':' + timerSeconds
 }
 
-main();
+console.log(calcTime(230));
