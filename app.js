@@ -1,7 +1,15 @@
 // DRY - Don't repeat yourself
 
-function sortLowToHigh(numbers) {
-  return numbers.sort((a, b) => a - b);
+function sortHighToLow(numbers) {
+  return numbers.sort((a, b) => {
+    console.log(b.price, a.price)
+    return b.price - a.price});
 }
 
-console.log(sortLowToHigh([4, 27, 3, 37, 100]));
+console.log(
+  sortHighToLow([
+    { id: 5, price: 50 },
+    { id: 5, price: 400 },
+    { id: 5, price: 10 },
+  ]),
+);
