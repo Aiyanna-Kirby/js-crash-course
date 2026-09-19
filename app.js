@@ -1,7 +1,7 @@
 // DRY - Don't repeat yourself
 
-function removeApples(arr) {
-  return arr.filter(elm => elm !== 'apple')
+function filterOutFalsy(arr) {
+  return arr.filter(elm => !!elm === true)
 }
 
-console.log(removeApples(["banana", "apple", "orange", "apple"]));
+console.log(filterOutFalsy(['banana', null]))
