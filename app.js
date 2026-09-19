@@ -1,7 +1,16 @@
 // DRY - Don't repeat yourself
 
-function filterOutFalsy(arr) {
-  return arr.filter(elm => !!elm === true)
+function convertToBoolean(arr) {
+  let booleanValues = [];
+  for (let i = 0; i < arr.length; ++i) {
+    if (!!arr[i] == true) {
+      booleanValues.push(true);
+    
+    } else if (!!arr[i] === false) {
+      booleanValues.push(false);
+    }
+  }
+  return booleanValues
 }
 
-console.log(filterOutFalsy(['banana', null]))
+console.log(convertToBoolean([500, 0, "Aiyanna", "", []]));
